@@ -98,6 +98,10 @@
   padding: 0;
 }
 
+
+html, body, h1, h2, h3, h4, h5, h6, p, span, div, label, input, textarea, button, a {
+  font-family: 'IBM Plex Sans Arabic', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
 html {
   font-size: var(--font-size);
   scroll-behavior: smooth;
