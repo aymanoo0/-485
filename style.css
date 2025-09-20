@@ -892,28 +892,12 @@ textarea:focus {
         grid-template-columns: 1fr;
     }
 }
-/* Ensure the mobile header is hidden on desktop */
+/* إظهار هيدر الجوال في جميع الشاشات */
 .mobile-header {
-    display: none;
+  display: flex !important;
 }
-
-/* Ensure the desktop header is visible by default */
 .desktop-header {
-    display: flex; /* Or whatever display property you use */
-}
-
-/* Media Query to hide desktop header on larger screens (e.g., tablets & desktops) */
-@media (min-width: 769px) {
-    .desktop-header {
-        display: none;
-    }
-}
-
-/* Media Query to show mobile header on smaller screens (e.g., phones) */
-@media (max-width: 768px) {
-    .mobile-header {
-        display: flex; /* Or block, grid, etc. */
-    }
+  display: none !important;
 }
 /* Media Query لإخفاء الهيدر على الشاشات الكبيرة */
 @media (min-width: 769px) {
@@ -921,22 +905,10 @@ textarea:focus {
         display: none;
     }
 }
-/* إخفاء قائمة الكمبيوتر في الشاشات الصغيرة */
-@media (max-width: 768px) {
-  #header-nav {
-    display: none !important;
-  }
-  #mobile-menu-btn {
-    display: block !important;
-  }
+/* إظهار قائمة الجوال فقط وإخفاء قائمة الكمبيوتر دائماً */
+#header-nav {
+  display: none !important;
 }
-
-/* إظهار القائمة العادية (Desktop) في الشاشات الكبيرة */
-@media (min-width: 769px) {
-  #header-nav {
-    display: flex !important;
-  }
-  #mobile-menu-btn {
-    display: none !important;
-  }
+#mobile-menu-btn {
+  display: block !important;
 }
